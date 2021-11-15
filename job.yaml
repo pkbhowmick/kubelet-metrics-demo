@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kubelet-metrics-demo
+spec:
+  template:
+    spec:
+      containers:
+        - name: kubelet-metrics-demo
+          image: pkbhowmick/kubelet-metrics-demo
+          imagePullPolicy: Always
+      restartPolicy: Never
